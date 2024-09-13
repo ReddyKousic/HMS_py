@@ -16,17 +16,20 @@ This project is a simple Hospital Management System built using Python with the 
 - MySQL Connector for Python
 - A MySQL server
 
-## Installation
+## Installation (Assuming that you have Git installed)
 
 1. **Clone the Repository:**
 
-
+   ```bash
+   git clone https://github.com/ReddyKousic/HMS_py.git
+   cd hospital-management-system
+   ```
 
 2. **Create and Activate a Virtual Environment:**
 
    ```bash
    python -m venv venv
-   source venv/bin/activate  # For Windows use: venv\Scripts\activate
+   venv\Scripts\activate
    ```
 
 3. **Install Dependencies:**
@@ -36,24 +39,21 @@ This project is a simple Hospital Management System built using Python with the 
    ```
 
 4. **Set Up the Database:**
+    > [!IMPORTANT]
+    > We will be using XAMPP because it is very easy to setup a database.
 
-   Ensure you have a MySQL server running and create a database named `hospital_db`. You can use the following command in your MySQL client:
+    **Install XAMPP:** Download and install XAMPP from Apache Friends.
 
-   ```sql
-   CREATE DATABASE hospital_db;
-   ```
+    **Start XAMPP:** Open the XAMPP Control Panel and start the Apache and MySQL services.
 
-5. **Create the Database Table:**
+    **Open phpMyAdmin:** Go to http://localhost/phpmyadmin in your web browser.
 
-   Run the following command to create the `patients` table:
+    Create the Database:
 
-   ```bash
-   python run.py
-   ```
+    In phpMyAdmin, click on Databases.
+    Enter hospital_db as the database name and click Create.
 
-   This will execute the `create_table()` method and create the necessary table.
-
-6. **Run the Application:**
+5. **Run the Application:**
 
    ```bash
    python run.py
@@ -70,8 +70,8 @@ import mysql.connector
 
 db = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="password",
+    user="root",         # for XAMPP username will  be root
+    password="password", # for XAMPP based database the password be nothing (i.e. "" )
     database="hospital_db"
 )
 ```
@@ -86,10 +86,6 @@ Replace `localhost`, `root`, `password`, and `hospital_db` with your MySQL host,
 ## Contributing
 
 Feel free to submit issues or pull requests to contribute to the project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
