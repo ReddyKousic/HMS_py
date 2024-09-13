@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Register a New Patient</h2>
+
+<form action="{{ url_for('patient_bp.register_patient') }}" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <label for="contact_info">Contact Information:</label>
+    <input type="text" id="contact_info" name="contact_info" required>
+
+    <label for="medical_history">Medical History:</label>
+    <textarea id="medical_history" name="medical_history"></textarea>
+
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

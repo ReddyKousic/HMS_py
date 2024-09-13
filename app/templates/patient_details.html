@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Patient Details</h2>
+
+<p><strong>Name:</strong> {{ patient.name }}</p>
+<p><strong>Date of Birth:</strong> {{ patient.dob }}</p>
+<p><strong>Gender:</strong> {{ patient.gender }}</p>
+<p><strong>Contact Info:</strong> {{ patient.contact_info }}</p>
+<p><strong>Medical History:</strong> {{ patient.medical_history }}</p>
+
+<a href="{{ url_for('patient_bp.get_all_patients') }}">Back to Patients List</a>
+{% endblock %}

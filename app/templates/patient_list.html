@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>All Patients</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Contact Info</th>
+            <th>Medical History</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for patient in patients %}
+        <tr>
+            <td>{{ patient[0] }}</td>
+            <td>{{ patient[1] }}</td>
+            <td>{{ patient[2] }}</td>
+            <td>{{ patient[3] }}</td>
+            <td>{{ patient[4] }}</td>
+            <td>{{ patient[5] }}</td>
+            <td><a href="{{ url_for('patient_bp.get_patient', patient_id=patient[0]) }}">View</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
