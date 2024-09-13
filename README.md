@@ -22,7 +22,7 @@ This project is a simple Hospital Management System built using Python with the 
 
    ```bash
    git clone https://github.com/ReddyKousic/HMS_py.git
-   cd hospital-management-system
+   cd HMS_py
    ```
 
 2. **Create and Activate a Virtual Environment:**
