@@ -37,10 +37,11 @@ This project is a simple Hospital Management System built using Python with the 
    ```bash
    pip install -r requirements.txt
    ```
+> [!IMPORTANT]
+> We will be using XAMPP because it is very easy to setup a database.
 
 4. **Set Up the Database:**
-    > [!IMPORTANT]
-    > We will be using XAMPP because it is very easy to setup a database.
+
 
     **Install XAMPP:** Download and install XAMPP from Apache Friends.
 
@@ -53,7 +54,7 @@ This project is a simple Hospital Management System built using Python with the 
     In phpMyAdmin, click on Databases.
     Enter hospital_db as the database name and click Create.
 
-5. **Run the Application:**
+6. **Run the Application:**
 
    ```bash
    python run.py
